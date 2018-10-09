@@ -1,0 +1,13 @@
+FROM perfectlysoft/perfectassistant:4.1
+# Perfect-libpq-linux.git-6061951773510427449/PADockerfile
+RUN apt-get -y update && apt-get install -y libpq-dev
+
+# Perfect-libcurl.git-2700493986345848139/PADockerfile
+RUN apt-get -y update && apt-get install -y libcurl4-openssl-dev
+
+# Perfect-LinuxBridge.git-684947342527077982/PADockerfile
+RUN apt-get -y update && apt-get install -y uuid-dev
+
+# Perfect-COpenSSL-Linux.git--7542509636774339065/PADockerfile
+RUN apt-get -y update && apt-get install -y libssl-dev
+RUN rm -rf /var/lib/apt/lists/*

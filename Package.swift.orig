@@ -1,0 +1,34 @@
+// swift-tools-version:4.0
+// The swift-tools-version declares the minimum version of Swift required to build this package.
+
+import PackageDescription
+
+let package = Package(
+    name: "estate_score_swift",
+    dependencies: [
+        .package(url: "https://github.com/PerfectlySoft/Perfect-HTTPServer.git", from: "3.0.0"),
+        .package(url: "https://github.com/PerfectlySoft/Perfect-PostgreSQL.git", from: "3.1.0"),
+        .package(url: "https://github.com/PerfectlySoft/Perfect-Mustache.git", from: "3.0.0"),
+        .package(url: "https://github.com/SwiftORM/Postgres-Storm.git", from: "3.0.0"),
+        .package(url: "https://github.com/PerfectlySoft/Perfect-SysInfo.git", from: "3.0.0"),
+        .package(url: "https://github.com/PerfectlySoft/Perfect-Logger.git", from: "3.0.0"),
+        .package(url: "https://github.com/iamjono/JSONConfig.git", from: "3.0.0"),
+        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", from: "4.0.0"),
+        .package(url: "https://github.com/Alamofire/Alamofire.git", from: "4.0.0")
+        // .package(url: "https://github.com/PerfectlySoft/Perfect-RequestLogger.git", from: "0.0.0")
+    ],
+    targets: [
+        .target(
+            name: "estate_score_swift",
+            dependencies: ["PerfectHTTPServer",
+                           "PerfectPostgreSQL",
+                           "PerfectMustache",
+                           "PostgresStORM",
+                           "PerfectSysInfo",
+                           "PerfectLogger", 
+                           "JSONConfig",
+                           "SwiftyJSON",
+                           "Alamofire"]),
+    ]
+)
+

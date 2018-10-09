@@ -1,0 +1,15 @@
+{
+
+	"baseURL": "http://localhost",
+	"baseDomain": "localhost",
+
+	"httpport": 8181,
+
+    "SQL_host": "10.201.1.26",
+    "SQL_port": "5432",
+    "SQL_dbname": "base",
+    "SQL_connect_timeout": "10",
+    "SQL_user": "base",
+    "SQL_password": "base"
+
+}
